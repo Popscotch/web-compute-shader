@@ -17,12 +17,20 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: '[name]',
-      filename: (entryName) => entryName + '.html',
+      title: 'web-compute-shader',
+      inject: true,
+      chunks: ["webgl"],
+      filename: 'webgl/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'web-compute-shader',
+      inject: true,
+      chunks: ["js"],
+      filename: 'js/index.html',
     }),
   ],
   output: {
-    filename: '[name].js',
+    filename: '[name]/bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
