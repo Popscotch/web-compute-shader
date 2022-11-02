@@ -12,7 +12,6 @@ function init() {
     // Create the emojis
     for (let i = 0; i < numberOfAgents; i++) {
         let element = document.createElement("div");
-        // TODO: Use random emoji list
         element.innerText = getEmoji();
         element.style.position = "absolute";
         element.style.left = numberToPx((Math.floor(Math.random() * (width/2) + (width/4))));

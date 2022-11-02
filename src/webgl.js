@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GPUComputationRenderer } from 'three/examples/jsm/misc/GPUComputationRenderer';
 
 const emojiList = ["❤️", "💩", "👌", "😎", "🔥"]; 
-const numberOfAgents = 2048;
+const numberOfAgents = 1024;
 const preferredDistance = 32;
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -85,7 +85,6 @@ function init() {
     initRenderer()
     for (let i = 0; i < numberOfAgents; i++) {
         let element = document.createElement("div");
-        // TODO: Use random emoji list
         element.innerText = getEmoji();
         element.style.position = "absolute";
         element.style.left = numberToPx((Math.floor(Math.random() * (width/2) + (width/4))));
