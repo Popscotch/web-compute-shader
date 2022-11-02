@@ -19,7 +19,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '[name]',
       filename: (entryName) => entryName + '.html',
-      inject: false
     }),
   ],
   output: {
